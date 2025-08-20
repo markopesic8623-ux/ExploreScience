@@ -1,0 +1,346 @@
+/* ===== Final style.css ===== */
+
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Page background and base text */
+body {
+    margin: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.5;
+    background: url('../img/bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+/* Layout container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background: rgba(0, 0, 0, 0.75);
+    padding: 0.75rem 0;
+}
+
+.header_inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0 0.25rem;
+}
+
+.site_title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Navigation (desktop) */
+.nav_list {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.nav_list li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+}
+
+.nav_list li a:hover,
+.nav_list li a:focus {
+    background: rgba(255, 255, 255, 0.06);
+    color: #00aaff;
+}
+
+/* Hamburger toggle (hidden on desktop) */
+.nav_toggle {
+    display: none;
+    font-size: 1.6rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    line-height: 1;
+}
+
+/* Welcome section */
+#welcome_stil {
+    text-align: center;
+    padding: 3.25rem 1rem;
+    background-color: rgba(0, 0, 0, 0.28);
+    margin: 2rem auto;
+    width: 100%;
+    border-radius: 10px;
+}
+
+#welcome_stil h2 {
+    font-size: 1.8rem;
+    display: block;
+    margin: 0 auto;
+}
+
+#welcome_stil p {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1rem;
+    color: #f1f1f1;
+}
+
+/* Main heading "Sciences" */
+.sciences_title {
+    text-align: center;
+    color: #ffffff;
+    /* pure white */
+    font-size: 2rem;
+    margin: 1.5rem 0 0.75rem;
+    font-weight: 700;
+}
+
+/* Grid and cards */
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.25rem;
+    padding: 1rem 0 2rem;
+}
+
+#glossary_container {
+    /* explicit id */
+    width: 100%;
+}
+
+.glossary_card {
+    background-color: rgba(0, 0, 0, 0.55);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 15rem;
+    min-height: 18rem;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.glossary_card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.45);
+}
+
+.glossary_card img {
+    width: 100%;
+    height: 9rem;
+    object-fit: cover;
+    display: block;
+}
+
+.glossary_card h3 {
+    text-align: center;
+    margin: 0.65rem 0 0.25rem;
+    font-size: 1.05rem;
+    color: #fff;
+    padding: 0 0.5rem;
+}
+
+.glossary_card p {
+    padding: 0 0.75rem 0.9rem;
+    margin-top: auto;
+    font-size: 0.92rem;
+    color: #eaeaea;
+    text-align: center;
+}
+
+/* Modal */
+#modal_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+}
+
+#modal_container.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal_overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.72);
+}
+
+.modal_content {
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    max-width: 900px;
+    max-height: 88vh;
+    overflow-y: auto;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    padding: 2.25rem;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+    transform: scale(0.97);
+    transition: transform 0.28s ease;
+}
+
+#modal_container.show .modal_content {
+    transform: scale(1);
+}
+
+.modal_close {
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    font-size: 1.6rem;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    padding: 0.15rem 0.45rem;
+    cursor: pointer;
+}
+
+/* Text overlay box in modal */
+.modal_text_overlay {
+    display: block;
+    width: 90%;
+    max-width: 850px;
+    margin: 0 auto 1.5rem auto;
+    background-color: rgba(0, 0, 0, 0.65);
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    color: #fff;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.modal_text_overlay h2 {
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+        text-align: center;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.85);
+}
+
+.modal_text_overlay p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.85);
+    color: #f7f7f7;
+    text-align: center;
+}
+
+
+/* Diagram canvas in modal */
+.modal_diagram {
+    display: block;
+    width: 90%;
+    height: 10rem;
+    margin: 1.5rem auto 0 auto;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: rgba(0, 0, 0, 0.6);
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+    color: #f1f1f1;
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Resp */
+
+/* Tab */
+@media (max-width: 1024px) {
+    .glossary_card {
+        width: 18.5rem;
+    }
+}
+
+/* Mob */
+@media (max-width: 768px) {
+    .nav_list {
+        display: none;
+        position: absolute;
+        top: 3.6rem;
+        right: 1rem;
+        flex-direction: column;
+        gap: 0.5rem;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 0.75rem;
+        border-radius: 8px;
+        min-width: 160px;
+    }
+
+    .nav_list.show {
+        display: flex;
+    }
+
+    .nav_toggle {
+        display: block;
+    }
+
+    .glossary_card {
+        width: 45%;
+    }
+}
+
+/* Sm phones */
+@media (max-width: 480px) {
+    .glossary_card {
+        width: 90%;
+    }
+
+    #welcome_stil {
+        padding: 2rem 0.75rem;
+    }
+
+    .modal_content {
+        padding: 1.25rem;
+    }
+
+    .modal_diagram {
+        height: 8.25rem;
+    }
+}
