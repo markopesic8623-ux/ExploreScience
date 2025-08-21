@@ -11,7 +11,7 @@ $(document).ready(function(){
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
     const unitRegex = /^\d+(\.\d+)?\s?(cm|m|kg|g|mm)?$/i;
 
-    // Name validation
+    // Name
     const name = $('#name').val().trim();
     if(!nameRegex.test(name)) {
       $('#name').addClass('error');
@@ -19,7 +19,7 @@ $(document).ready(function(){
       valid = false;
     }
 
-    // Email validation
+    // Email
     const email = $('#email').val().trim();
     if(!emailRegex.test(email)) {
       $('#email').addClass('error');
@@ -52,3 +52,4 @@ if(!date || date > today) {
     }
   });
 });
+
