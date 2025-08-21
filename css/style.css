@@ -344,3 +344,46 @@ footer {
         height: 8.25rem;
     }
 }
+
+
+/*FORMA*/
+
+#forma_intro {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 40px 20px;
+  background: rgba(0,0,0,0.6); /* semi-transparent so it fits site style */
+  border-radius: 12px;
+  text-align: center;
+  color: #fffcec;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+
+#forma_intro h2 {
+  margin-bottom: 15px;
+  font-size: 28px;
+}
+
+#forma_intro p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #fff;
+  margin-bottom: 25px;
+}
+
+.btn-experiment {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #FFD700;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.btn-experiment:hover {
+  background-color: #6e5300;
+  color: #000;
+}

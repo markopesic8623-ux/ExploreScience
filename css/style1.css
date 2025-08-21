@@ -1,0 +1,87 @@
+/* Full page background */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url('../img/bg2.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
+
+/* Semi-transparent form container */
+.forma-container {
+  max-width: 450px;
+  margin: 50px auto;
+  background: rgba(0,0,0,0.7); /* slightly transparent so background shows through */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff8ce;
+}
+
+label {
+  display: block;
+  margin: 12px 0 5px;
+  font-weight: bold;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  margin-bottom: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+input.error, textarea.error {
+  border: 2px solid #FF4500;
+  background-color: #2b0000;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #FFD700;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #FFC107;
+}
+
+.poruka {
+  color: #FF6347;
+  font-size: 14px;
+  margin-top: -5px;
+  margin-bottom: 5px;
+}
+
+#bravo {
+  margin-top: 10px;
+  text-align: center;
+  color: #00FF7F;
+  font-weight: bold;
+}
+
+/* Optional: placeholder color */
+::placeholder {
+  color: #ccc;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
