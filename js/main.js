@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Observations from telescopes and satellites inform theoretical models of the cosmos."],
             img: "img/cosmology.jpg",
             bgImg: "img/cosm1.jpg",
-            diagramType: "expandingCircle"
+            diagramType: "bigBang"
         },
         {
             title: "Evolution",

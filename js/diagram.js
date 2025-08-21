@@ -7,7 +7,7 @@ function drawDiagram(canvasSelector, type) {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     switch (type) {
-        case "expandingCircle":
+        case "bigBang":
             let radius = 0;
             function expandCircle() {
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -17,7 +17,7 @@ function drawDiagram(canvasSelector, type) {
                 ctx.lineWidth = 2;
                 ctx.stroke();
                 if (radius < Math.min(canvas.width, canvas.height) / 2) {
-                    radius += 2;
+                    radius += 0.3;
                     requestAnimationFrame(expandCircle);
                 }
             }
