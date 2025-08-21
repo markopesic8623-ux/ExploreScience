@@ -119,14 +119,14 @@ function drawDiagram(canvasSelector, type) {
 
         case "pi":
             const text = "π = 3.14159265358979323846264338327950288419716939937510…";
-            let indeks1 = 0;
+            let i1 = 0;
             function writePi() {
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
                 ctx.font = "24px Arial";
                 ctx.fillStyle = "#ffff00";
                 ctx.fillText(text.slice(0, i1), 10, canvas.height / 2);
-                if (indeks1 < text.length) {
-                    indeks1++;
+                if (i1 < text.length) {
+                    i1++;
                     setTimeout(writePi, 200);
                 }
             }
