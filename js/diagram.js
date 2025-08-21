@@ -9,7 +9,7 @@ function drawDiagram(canvasSelector, type) {
     switch (type) {
         case "bigBang":
             let radius = 0;
-            function expandCircle() {
+            function bB() {
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
                 ctx.beginPath();
                 ctx.arc(canvas.width / 2, canvas.height / 2, radius, 0, 2 * Math.PI);
@@ -18,13 +18,13 @@ function drawDiagram(canvasSelector, type) {
                 ctx.stroke();
                 if (radius < Math.min(canvas.width, canvas.height) / 2) {
                     radius += 0.3;
-                    requestAnimationFrame(expandCircle);
+                    requestAnimationFrame(bB);
                 }
             }
-            expandCircle();
+            bB();
             break;
 
-        case "branchingLine":
+        case "evol":
             const branches = [
                 [{ x: 0.5, y: 0.9 }, { x: 0.5, y: 0.6 }, { x: 0.3, y: 0.4 }],
                 [{ x: 0.5, y: 0.6 }, { x: 0.7, y: 0.4 }]

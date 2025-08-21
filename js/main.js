@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Fossil records and DNA analysis provide strong evidence for evolution."],
             img: "img/evolution.jpg",
             bgImg: "img/evol1.jpg",
-            diagramType: "branchingLine"
+            diagramType: "evol"
         },
         {
             title: "Quantum Mechanics",

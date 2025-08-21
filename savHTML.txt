@@ -1,0 +1,178 @@
+INDEX
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty of Modern Science — Home</title>
+    <meta name="description"
+        content="Glossary of sciences: cosmology, evolution, quantum mechanics, chemistry, mathematics, medicine">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/ikonica.jpg" type="image/x-icon">
+
+</head>
+
+<body>
+    <header>
+        <div class="container header_inner">
+            <h1 class="site_title">Science Glossary</h1>
+            <nav aria-label="Main navigation">
+                <button class="nav_toggle">&#9776;</button>
+                <ul class="nav_list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="forma.html">Experiment Form</a></li>
+                    <li><a href="author.html">Author / Documentation</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="welcome_stil" class="container">
+        <h2>Welcome!</h2>
+        <p>Advancement of society and science seem to go hand in hand. Here are some that I find most fascinating. Many
+            often
+            misunderstood.</p>
+    </section>
+
+    <main class="container">
+        <h2 class="sciences_title">Sciences</h2>
+        <div id="glossary_container" class="grid"></div>
+    </main>
+
+    <div id="modal_container"></div>
+
+    <section id="forma_intro" class="intro-section">
+        <div class="intro_container">
+            <h2>Submit Your Experiment Data</h2>
+            <p>We want your input! Share your experiment measurements and observations with us through our online form.
+                Click the button below to get started.</p>
+            <a href="forma.html" class="btn-experiment">Go to Form</a>
+        </div>
+    </section>
+
+
+    <footer class="container">
+        <p>&copy; 2025 Marko Pesic — Beauty of Modern Science</p>
+
+        <div class="footers">
+            <a href="dokumentacija.pdf" target="_blank">Documentation</a>
+            <a href="savJS.txt" target="_blank">JS</a>
+            <a href="savHTML.txt" target="_blank">HTML</a>
+            <a href="savCSS.txt" target="_blank">CSS</a>
+            <a href="sitemap.xml" target="_blank">Sitemap</a>
+        </div>
+
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="js/diagram.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
+
+
+FORMA
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Science Form Validation</title>
+    <link rel="stylesheet" href="css/style1.css">
+    <link rel="icon" href="img/ikonica.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <a href="index.html" class="back">← Take Me Back</a>
+    <div class="forma-container">
+        <h2>Experiment Data Submission</h2>
+
+        <form id="scienceForma">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" placeholder="example@domain.com" required>
+
+            <label for="date">Date of Experiment:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="value">Measurement (numeric + optional unit):</label>
+            <input type="text" id="value" name="value" placeholder="e.g., 23.5 cm" required>
+
+            <label for="notes">Notes (optional):</label>
+            <textarea id="notes" name="notes" maxlength="200" placeholder="Optional notes..."></textarea>
+
+            <button type="submit">Submit</button>
+            <div class="success" id="bravo"></div>
+        </form>
+    </div>
+
+    <footer class="container">
+        <p>&copy; 2025 Marko Pesic — Beauty of Modern Science</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/forma.js"></script>
+
+</body>
+
+</html>
+
+AUTHOR
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About the Author</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/ikonica.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <a href="index.html" class="back">← Take Me Back</a>
+    <div class="container">
+        <div class="author-container">
+            <h2>About the Author</h2>
+            <h3>Marko Pesic, 86/23, IT</h3>
+            <img src="img/me.jpg" alt="Photo of me" class="author-photo">
+            <p>
+                I am a web developer, programmer, and science enthusiast.
+                Passionate about making scientific knowledge accessible, I create interactive tools, visualizations, and
+                educational content for learners of all ages.
+            </p>
+            <p>
+                With experience in web development, JavaScript, C#, and data visualization, I combine programming with
+                love for science to produce projects that are both informative and visually engaging.
+            </p>
+            <p>
+                You can reach out via email at <a
+                    href="mailto:marko.pesic.86.23@ict.edu.rs">marko.pesic.86.23@ict.edu.rs</a> or explore more projects
+                through this website.
+            </p>
+            <a href="index.html" class="btn-experiment">Back to Home</a>
+        </div>
+    </div>
+    <footer class="container">
+        <p>&copy; 2025 Marko Pesic — Beauty of Modern Science</p>
+    </footer>
+
+</body>
+
+</html>
+
+
